@@ -1,0 +1,22 @@
+<%= form_with(model: bench) do |form| %>
+  <% if bench.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bench.errors.count, "error") %> prohibited this bench from being saved:</h2>
+
+      <ul>
+        <% bench.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

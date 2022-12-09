@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @bench %>
+
+<div>
+  <%= link_to "Edit this bench", edit_bench_path(@bench) %> |
+  <%= link_to "Back to benches", benches_path %>
+
+  <%= button_to "Destroy this bench", @bench, method: :delete %>
+</div>

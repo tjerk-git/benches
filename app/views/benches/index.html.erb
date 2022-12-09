@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Benches</h1>
+
+<div id="benches">
+  <% @benches.each do |bench| %>
+    <%= render bench %>
+    <p>
+      <%= link_to "Show this bench", bench %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New bench", new_bench_path %>
